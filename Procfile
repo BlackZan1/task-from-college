@@ -1,1 +1,1 @@
-web: gunicorn quatro_app.wsgi
+web: gunicorn quatro_app.wsgi --log-file -
