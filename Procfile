@@ -1,0 +1,1 @@
+web: gunicorn quatro_app.wsgi
