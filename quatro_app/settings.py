@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
+MIDDLEWARE_CLASSES = MIDDLEWARE
+
 ROOT_URLCONF = 'quatro_app.urls'
 
 TEMPLATES = [
