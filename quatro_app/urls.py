@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-# paths
+# views
+from .views import MainPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/cars', include('cars.api.urls'))
+    path('api/cars', include('cars.api.urls')),
+    path('', MainPage, name="main_page")
 ]
+
+urlpatterns += staticfiles_urlpatterns()
