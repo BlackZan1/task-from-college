@@ -148,11 +148,13 @@ justify-content: center;
  
 }
 .secondlistinner{
-    width: 930px;
+    width: 80%;
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+     gap: 1%;
     margin-top: 50px;
+    margin-bottom: 50px;
    /* justify-content: center;*/
 }
 /* FOOTER */
@@ -161,7 +163,7 @@ justify-content: center;
 .footer{
     box-sizing: border-box;
     height: 90px;
-    width: auto;
+    width: 100%;
     background:#5FE2FF ;
     border-top-left-radius:0px ;
     border-top-right-radius: 0px;
@@ -190,7 +192,7 @@ justify-content: center;
 .br{
    color: red;
 }
- .strelkabotton{
+ /* .strelkabotton{
    display: inline-flex;
     padding: 8px 10px;
     vertical-align: top;
@@ -205,7 +207,7 @@ justify-content: center;
     .strelkabotton:hover{
  text-decoration:none;    opacity: 1;
  color: #5FE2FF;
-}
+} */
 .iconsnav img{
     margin: 5px;
 
