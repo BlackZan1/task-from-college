@@ -20,14 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # views
-from .views import MainPage, ListPage
+from .views import MainPage, ListPage, DetailsPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/cars', include('cars.api.urls')),
     path('', MainPage, name="main_page"),
     path('list', ListPage, name="list_page"),
-    path('details', ListPage, name="details_page")
+    path('details', DetailsPage, name="details_page")
 ]
 
 urlpatterns += staticfiles_urlpatterns()
