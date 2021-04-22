@@ -14,3 +14,8 @@ def DetailsPage(request):
     print(request)
 
     return render(request, 'details.html', {})
+
+def ContactUsPage(request):
+    print(request)
+
+    return render(request, 'contact_us.html', {})
