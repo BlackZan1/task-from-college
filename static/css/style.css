@@ -238,15 +238,19 @@ img{
     color: #CCCCCC;
 }
 
+.info10_link2 {
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .info__link22{
     text-align: center;
     font-size: 16px;
+    margin: 42px auto 0;
     color:#fff;
-    margin-top: 42px;
-    margin-left: 585px;
     padding-top: 7px;
-    padding-left: 0px;
-    padding-right: 0px;
     border: 2px solid;
     border-left:2px solid;
     border-radius: 12px;
