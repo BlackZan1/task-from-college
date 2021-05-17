@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+# models
+from cars_items.models import Car
+
 def MainPage(request):
     print(request)
 
@@ -7,8 +10,10 @@ def MainPage(request):
 
 def ListPage(request):
     print(request)
+    
+    items = Car.objects.all()
 
-    return render(request, 'list.html', {})
+    return render(request, 'list.html', { 'items': items })
 
 def DetailsPage(request):
     print(request)

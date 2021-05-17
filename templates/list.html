@@ -41,78 +41,18 @@
      
         <div class="secondlist">
             <div class="secondlistinner">
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
-                <div class="textlistofcar">
-                <br>Car name
-                <br>discription
-                <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/570.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Lexus LX-570 2021
-                    <br>Бери не пожалеешь.
-                    <h3 class="priceauto">$95000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="/details"><img  class="carimg" src="static/image/camry.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Toyota Camry 70 LE
-                    <br>discription
-                    <h3 class="priceauto">$24900</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/fit.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Honda Fit 2015
-                    <br>Расход 6 литров
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img class="carimg" src="static/image/x7.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>BMW X7 diesel
-                    <br>
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
-                    <div class="textlistofcar">
-                    <br>Car name
-                    <br>discription
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Car name
-                    <br>discription
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Car name
-                    <br>discription
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
-            <div class="listofcar">
-                <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
-                <div class="textlistofcar">
-                    <br>Car name
-                    <br>discription
-                    <h3 class="priceauto">$10000</h3>
-                </div>
-            </div>
+                {% for item in items %}
+                    <div class="listofcar">
+                        <a class="carimg" href="#"><img  class="carimg" src="static/image/mb.png" alt=""></a>
+
+                        <div class="textlistofcar">
+                            <br>{{ item.name }}
+                            <br>{{ item.description }}
+
+                            <h3 class="priceauto">${{ item.price }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>    
         </div>
          <!-- <a class="strelkabotton" href="/quatrosalon/"><img src="static/image/strelka.png" alt="">
