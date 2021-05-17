@@ -18,18 +18,19 @@ from core.upload_rename import upload_rename
 
 class Car(models.Model):
     class CarStatusChoices(models.TextChoices):
-        'Новый' = 'Новый'
-        'Б/у' = 'Б/у'
-        'Скоро будет' = 'Скоро будет'
+        Новый = 'Новый'
+        БУ = 'Б/у'
+        Скоро = 'Скоро будет'
 
     class CarTypesChoices(models.TextChoices):
-        'Автомобиль' = 'Автомобиль'
-        'Электромобиль' = 'Электромобиль'
-        'Мотоцикл' = 'Мотоцикл'
+        Автомобиль = 'Автомобиль'
+        Электромобиль = 'Электромобиль'
+        Мотоцикл = 'Мотоцикл'
 
     class CarGearboxesChoices(models.TextChoices):
-        'Автоматический' = 'Автоматический'
-        'Механический' = 'Механический'
+        Автоматический = 'Автоматический'
+        Механический = 'Механический'
+        Неавтоматическая = 'Неавтоматическая'
 
     name = models.CharField(max_length = 50)
     price = models.IntegerField(null = True, blank = True)
@@ -38,9 +39,9 @@ class Car(models.Model):
     publish_date = models.DateField(null = True, blank = True)
     brand = models.ForeignKey(Brand, on_delete = models.SET_NULL, null = True, blank = True)
     model_type = models.CharField(max_length = 50, null = True, blank = True)
-    status = models.CharField(choices = CarStatusChoices.choices, default = CarStatusChoices.SOON, max_length = 4)
-    car_type = models.CharField(choices = CarTypesChoices.choices, default = CarTypesChoices.AUTO, max_length = 50)
-    gearbox = models.CharField(choices = CarGearboxesChoices.choices, default = CarGearboxesChoices.AUTO, max_length = 50)
+    status = models.CharField(choices = CarStatusChoices.choices, default = CarStatusChoices.Скоро, max_length = 50)
+    car_type = models.CharField(choices = CarTypesChoices.choices, default = CarTypesChoices.Автомобиль, max_length = 50)
+    gearbox = models.CharField(choices = CarGearboxesChoices.choices, default = CarGearboxesChoices.Автоматический, max_length = 50)
     created_date = models.DateTimeField(auto_now_add = True)
     updated_date = models.DateTimeField(auto_now = True)
 
