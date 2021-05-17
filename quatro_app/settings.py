@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'corsheaders',
-    'cars',
+    'cars_items',
     'core',
     'brands'
 ]

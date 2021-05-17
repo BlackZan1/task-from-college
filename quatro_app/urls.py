@@ -24,7 +24,7 @@ from .views import MainPage, ListPage, DetailsPage, ContactUsPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/cars', include('cars.api.urls')),
+    path('api/cars', include('cars_items.api.urls')),
     path('', MainPage, name="main_page"),
     path('list', ListPage, name="list_page"),
     path('details', DetailsPage, name="details_page"),
