@@ -30,7 +30,7 @@ class Car(models.Model):
 
     name = models.CharField(max_length = 50)
     price = models.IntegerField(null = True, blank = True)
-    images = models.ManyToManyField(CustomImageModel)
+    image = models.ImageField(upload_to = upload_rename('cars'))
     description = models.TextField()
     publish_date = models.DateField(null = True, blank = True)
     brand = models.ForeignKey(Brand, on_delete = models.SET_NULL, null = True, blank = True)
