@@ -7,6 +7,6 @@ def upload_rename(path):
 
         filename = '{}.{}'.format(uuid4().hex, ext)
 
-        return os.path.join(path, filename)
+        return os.path.join('media/' + path, filename)
 
     return wrapper
