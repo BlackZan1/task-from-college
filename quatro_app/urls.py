@@ -27,7 +27,7 @@ urlpatterns = [
     path('api/cars', include('cars_items.api.urls')),
     path('', MainPage, name="main_page"),
     path('list', ListPage, name="list_page"),
-    path('details', DetailsPage, name="details_page"),
+    path('<int:pk>', DetailsPage, name="details_page"),
     path('contact_us', ContactUsPage, name="contact_us_page")
 ]
 

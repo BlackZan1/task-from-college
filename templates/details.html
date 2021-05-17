@@ -32,15 +32,15 @@
         <div class="conteiner">
              <div class="intro1">
                  <div class="name_car">
-                Camry LE 2018год
+                    {{ item.name }}
                  </div>
             </div> 
 
         <div class="intro2">
             <div class="photo">
-                <img src="static/image/image 5.png" alt="" width="748" height="407" >
+                <img src="{{ item.image.url }}" alt="" >
                 <div class="price">
-                    $10.000
+                    ${{ item.price }}
                 </div>
             </div>
             
@@ -50,13 +50,12 @@
             <div class="characteristic">
                 <p class="char__link0">Характеристики</p>
                 <ul>
-                <li><span class="char__link">Тип автомобиля:</span><span class="char__link2"> Седан</span> </li>
-                <li><span class="char__link">Год выпуска:</span><span class="char__link2"> 2018</span> </li>
-                <li><span class="char__link">Марка: </span><span class="char__link2"> Toyota</span> </li>
-                <li><span class="char__link">Модель:</span><span class="char__link2"> Camry</span> </li>
-                <li><span class="char__link">Тип кузова:</span><span class="char__link2">LE</span> </li>
-                <li><span class="char__link">Коробка передач:</span><span class="char__link2"> Автоматическая</span></li>
-                <li><span class="char__link">Состояние:</span> <span class="char__link2"> Новый</span></li>
+                <li><span class="char__link">Тип автомобиля:</span><span class="char__link2"> {{ item.car_type }}</span> </li>
+                <li><span class="char__link">Год выпуска:</span><span class="char__link2"> {{ item.publish_date }}</span> </li>
+                <li><span class="char__link">Марка: </span><span class="char__link2"> {{ item.brand.name }}</span> </li>
+                <li><span class="char__link">Модель:</span><span class="char__link2"> {{ item.model_type }}</span> </li>
+                <li><span class="char__link">Коробка передач:</span><span class="char__link2"> {{ item.gearbox }}</span></li>
+                <li><span class="char__link">Состояние:</span> <span class="char__link2"> {{ item.status }}</span></li>
                 </ul>
             </div>
 
