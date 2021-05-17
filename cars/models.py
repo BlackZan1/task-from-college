@@ -6,15 +6,15 @@ from brands.models import Brand
 # utils
 from core.upload_rename import upload_rename
 
-class CustomImageModel(models.Model):
-    url = models.ImageField(upload_to = upload_rename('cars'))
-    name = models.CharField(max_length = 100)
+# class CustomImageModel(models.Model):
+#     url = models.ImageField(upload_to = upload_rename('cars'))
+#     name = models.CharField(max_length = 100)
 
-    class Meta:
-        ordering = ['id']
+#     class Meta:
+#         ordering = ['id']
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 class Car(models.Model):
     class CarStatusChoices(models.TextChoices):
