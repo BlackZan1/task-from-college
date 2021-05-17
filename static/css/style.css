@@ -322,16 +322,18 @@ p{
      margin: 0px;
     font-size: 12px;
     color: black;
+    padding-top: 12px;
 }
 
 .footer__link3 {
     display: flex;
-    align-items: center;
     margin-right: 100px;
 }
 
 .footer__link3 img {
     margin-left: 10px;
+    width: 24px;
+    height: 24px;
 }
 
 .br{
