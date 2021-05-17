@@ -18,19 +18,22 @@ from core.upload_rename import upload_rename
 
 class Car(models.Model):
     class CarStatusChoices(models.TextChoices):
-        NEW = 'new'
-        USED = 'used'
-        SOON = 'soon'
+        'Новый' = 'Новый'
+        'Б/у' = 'Б/у'
+        'Скоро будет' = 'Скоро будет'
 
     class CarTypesChoices(models.TextChoices):
-        AUTO = 'Автомобиль'
+        'Автомобиль' = 'Автомобиль'
+        'Электромобиль' = 'Электромобиль'
+        'Мотоцикл' = 'Мотоцикл'
 
     class CarGearboxesChoices(models.TextChoices):
-        AUTO = 'Автоматический'
+        'Автоматический' = 'Автоматический'
+        'Механический' = 'Механический'
 
     name = models.CharField(max_length = 50)
     price = models.IntegerField(null = True, blank = True)
-    image = models.ImageField(upload_to = upload_rename('cars'))
+    image = models.ImageField(upload_to = upload_rename('cars'), null = True, blank = True)
     description = models.TextField()
     publish_date = models.DateField(null = True, blank = True)
     brand = models.ForeignKey(Brand, on_delete = models.SET_NULL, null = True, blank = True)
